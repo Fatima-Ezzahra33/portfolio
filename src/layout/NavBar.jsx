@@ -38,7 +38,7 @@ const NavBar = () => {
         <Button size="sm" classname="hidden md:block">
           Resume
         </Button>
-        {/*Mobile menu btn*/}
+        {/*Mobile menu button*/}
         <button className="md:hidden p-2 text-foreground"
         onClick={()=>{
           setIsMobileMenuOpen((prev) => !prev);
