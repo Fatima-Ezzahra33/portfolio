@@ -24,7 +24,7 @@ function Hero() {
         </div>
         {/*Content*/}
         <div>
-          {/*left col - text*/}
+          {/*left col - text and description*/}
           <div>
             <div className='animate-fade-in'>
               <span className='h-2 w-2 bg-primary rounded-full'>Software Engineering student</span>
