@@ -30,7 +30,7 @@ function Hero() {
               <span className='h-2 w-2 bg-primary rounded-full'>Software Engineering student</span>
             </div>
           </div>
-          {/*right col -pic*/}
+          {/*right col -profile picture*/}
         </div>
     </section>
   )
