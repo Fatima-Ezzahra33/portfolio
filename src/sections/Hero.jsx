@@ -2,7 +2,7 @@ import React from 'react'
 
 function Hero() {
   return (
-    <section id='hero'>
+    <section id='hero' className='pt-40 '>
         {/*Bg*/}
         <div className='absolute inset-0'>
           <img src="/hero-bg.jpg" alt="Hero image" className='w-full h-full object-cover opacity-40 ' />
@@ -27,7 +27,9 @@ function Hero() {
           {/*left col - text and description*/}
           <div>
             <div className='animate-fade-in'>
-              <span className='h-2 w-2 bg-primary rounded-full'>Software Engineering student</span>
+              <span>
+                <span className='h-2 w-2 bg-primary rounded-full'>Software Engineering student</span>
+              </span>
             </div>
           </div>
           {/*right col -profile picture*/}
