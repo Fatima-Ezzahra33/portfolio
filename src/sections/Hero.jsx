@@ -3,11 +3,10 @@ import Button from "@/components/Button";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 import {
   ArrowRight,
+  ChevronDown,
   Download,
   Github,
   Linkedin,
-  SaveAll,
-  SaveIcon,
 } from "lucide-react";
 
 function Hero() {
@@ -71,6 +70,7 @@ function Hero() {
       <div className="absolute overflow-hidden pointer-events-none inset-0 ">
         {[...Array(30)].map((_, i) => (
           <div
+            key={i}
             className="absolute w-1.5 h-1.5 rounded-full opacity-60 "
             style={{
               background: "#20B2A6",
@@ -84,7 +84,7 @@ function Hero() {
       </div>
       {/*Content*/}
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10 ">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center justify-center">
           {/*left col - text and description*/}
           <div className="space-y-8 ">
             <div className="animate-fade-in animate-delay-100">
@@ -136,7 +136,7 @@ function Hero() {
                 },
               ].map((social, index) => (
                 <a
-                  key={social.index}
+                  key={index}
                   href={social.href}
                   className="p-2 rounded-full glass hover:bg-primary/20 hover:text-primary transition-all duration-100"
                 >
@@ -164,15 +164,15 @@ function Hero() {
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                     <span className="text-sm font-medium">
-                      Available for work
+                      Looking for an internship
                     </span>
                   </div>
                 </div>
                 {/*stats badge*/}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-xl font-bold text-primary">3+</div>
+                  <div className="text-xl font-bold text-primary">Full stack & AI </div>
                   <div className="text-md text-muted-foreground">
-                    years of exp.
+                    learning and building everyday
                   </div>
                 </div>
               </div>
@@ -193,6 +193,12 @@ function Hero() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex flex-col items-center justify-center mb-10 sm:mb-5 md:mb-0 animate-fade-in animation-delay-600">
+        <span className="text-xl text-muted-foreground animate-pulse ">SCROLL</span>
+        <a href="#about">
+          <ChevronDown className="animate-pulse h-10 w-10 text-muted-foreground" />
+        </a>
       </div>
     </section>
   );

@@ -64,7 +64,7 @@ const NavBar = () => {
       {isMobileMenuOpen && (<div className="md:hidden glass-strong animate-fade-in">
         <div className="container mx-auto px-6 py-6 flex flex-col gap-4 ">
           {navLinks.map((link, index) => (
-            <a
+            <a onClick={()=>setIsMobileMenuOpen(false)}
               key={index}
               href={link.href}
               className="text-lg text-muted-foreground hover:text-foreground py-2"
