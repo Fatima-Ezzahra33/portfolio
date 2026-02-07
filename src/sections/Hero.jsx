@@ -12,49 +12,49 @@ import {
 
 function Hero() {
   const skills = [
-  // Languages
-  "Python",
-  "Java",
-  "JavaScript",
-  "TypeScript",
-  "PHP",
-  "C++",
+    // Languages
+    "Python",
+    "Java",
+    "JavaScript",
+    "TypeScript",
+    "PHP",
+    "C++",
 
-  // Frontend
-  "React",
-  "Vue.js",
-  "Tailwind CSS",
-  "Vitest",
-  "Cypress",
+    // Frontend
+    "React",
+    "Vue.js",
+    "Tailwind CSS",
+    "Vitest",
+    "Cypress",
 
-  // Backend
-  "Spring Boot",
-  "Laravel",
-  "Express.js",
+    // Backend
+    "Spring Boot",
+    "Laravel",
+    "Express.js",
 
-  // Databases
-  "MySQL",
-  "PostgreSQL",
-  "Oracle",
-  "MongoDB",
+    // Databases
+    "MySQL",
+    "PostgreSQL",
+    "Oracle",
+    "MongoDB",
 
-  // DevOps & Tools
-  "Docker",
-  "Kubernetes",
-  "Git",
-  "GitHub Actions",
-  "GitLab CI",
+    // DevOps & Tools
+    "Docker",
+    "Kubernetes",
+    "Git",
+    "GitHub Actions",
+    "GitLab CI",
 
-  // Data & AI
-  "SQL",
-  "Pandas",
-  "NumPy",
-  "Matplotlib",
-  "Seaborn",
-  "Scikit-learn",
-  "XGBoost",
-  "SHAP"
-];
+    // Data & AI
+    "SQL",
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "Seaborn",
+    "Scikit-learn",
+    "XGBoost",
+    "SHAP",
+  ];
 
   return (
     <section id="hero">
@@ -118,9 +118,12 @@ function Hero() {
               <Button size="lg">
                 Contact me <ArrowRight className="w-5 h-5" />
               </Button>
-              <AnimatedBorderButton>
-                <Download className="w-5 h-5" /> Download CV
-              </AnimatedBorderButton>
+              <a href="/fzCv.pdf" download="CV-Abdessettar-Fatima-Ezzahra">
+                <AnimatedBorderButton>
+                  <Download className="w-5 h-5" />
+                  Download CV
+                </AnimatedBorderButton>
+              </a>
             </div>
             {/*Social links*/}
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
@@ -168,9 +171,25 @@ function Hero() {
                 {/*stats badge*/}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
                   <div className="text-xl font-bold text-primary">3+</div>
-                  <div className="text-md text-muted-foreground">years of exp.</div>
+                  <div className="text-md text-muted-foreground">
+                    years of exp.
+                  </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        {/*skills section*/}
+        <div className="mt-20 animate-fade-in animation-delay-600">
+          <div className="relative overflow-hidden">
+            <div className="flex animate-marquee">
+              {[...skills, ...skills].map((skill, index) => (
+                <div key={index} className="shrink-0 px-8 py-4 ">
+                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
+                    {skill}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
