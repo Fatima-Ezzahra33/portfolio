@@ -11,6 +11,51 @@ import {
 } from "lucide-react";
 
 function Hero() {
+  const skills = [
+  // Languages
+  "Python",
+  "Java",
+  "JavaScript",
+  "TypeScript",
+  "PHP",
+  "C++",
+
+  // Frontend
+  "React",
+  "Vue.js",
+  "Tailwind CSS",
+  "Vitest",
+  "Cypress",
+
+  // Backend
+  "Spring Boot",
+  "Laravel",
+  "Express.js",
+
+  // Databases
+  "MySQL",
+  "PostgreSQL",
+  "Oracle",
+  "MongoDB",
+
+  // DevOps & Tools
+  "Docker",
+  "Kubernetes",
+  "Git",
+  "GitHub Actions",
+  "GitLab CI",
+
+  // Data & AI
+  "SQL",
+  "Pandas",
+  "NumPy",
+  "Matplotlib",
+  "Seaborn",
+  "Scikit-learn",
+  "XGBoost",
+  "SHAP"
+];
+
   return (
     <section id="hero">
       {/*Bg*/}
@@ -102,16 +147,29 @@ function Hero() {
           <div className="relative animate-fade-in animation-delay-300">
             <div className="relative max-w-md mx-auto">
               {/* Blurred background glow */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse z-0" />
+              <div className="absolute inset-0 rounded-3xl bg-linear-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse z-0" />
 
               {/* Image container (NOT blurred) */}
               <div className="relative glass rounded-4xl p-2 glow-border z-10">
                 <img
                   src="/portfolio3.png"
                   alt="Abdessettar Fatima-Ezzahra"
-                  className="w-full aspect-[4/5] object-cover rounded-3xl"
+                  className="w-full aspect-4/5 object-cover rounded-3xl"
                 />
                 {/*floating badge*/}
+                <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                    <span className="text-sm font-medium">
+                      Available for work
+                    </span>
+                  </div>
+                </div>
+                {/*stats badge*/}
+                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
+                  <div className="text-xl font-bold text-primary">3+</div>
+                  <div className="text-md text-muted-foreground">years of exp.</div>
+                </div>
               </div>
             </div>
           </div>
