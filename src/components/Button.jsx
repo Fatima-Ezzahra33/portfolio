@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Button = ({classname="",size="default",children}) => {
+const Button = ({classname="",size="default",children,...props}) => {
   const baseClasses = 
   "hover:cursor-pointer relative overflow-hidden rounded-full font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-primary bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/25";
   const sizeClasses = {
@@ -11,7 +11,7 @@ const Button = ({classname="",size="default",children}) => {
   const classes = `${baseClasses} ${sizeClasses[size]} ${classname}`;
   return (
     <div>
-        <button className={classes}>
+        <button className={classes} {...props}>
             <span className="relative flex items-center justify-center gap-2">
                 {children}
             </span>

@@ -4,25 +4,24 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "#about", Label: "about" },
-  { href: "#skills", Label: "skills" },
   { href: "#projects", Label: "projects" },
-  { href: "#experience", Label: "experience" },
+  { href: "#studies", Label: "studies" },
   { href: "#contact", Label: "contact" },
 ];
 const NavBar = () => {
-  const [isMobileMenuOpen,setIsMobileMenuOpen]=useState(false);
-  const [isScrolled,setIsScrolled]=useState(false);
-  useEffect(
-    ()=>{
-      const handleScroll = () => {
-        setIsScrolled(window.scrollY > 50);
-      }
-        window.addEventListener("scroll",handleScroll);
-        return ()=>window.removeEventListener("scroll",handleScroll);
-    },[]
-  ) // this will run at the start of when the component is first rendered 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []); // this will run at the start of when the component is first rendered
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "glass-strong py-3 " : "bg-transparent py-5"}`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "glass-strong py-3 " : "bg-transparent py-5"}`}
+    >
       <nav className="container mx-auto px-6 flex justify-between items-center">
         <a
           href="#"
@@ -45,38 +44,42 @@ const NavBar = () => {
           </div>
         </div>
         <a href="/fzCv.pdf" download="CV-Abdessettar-Fatima-Ezzahra">
-        <Button size="sm" classname="hidden md:block">
-          Resume
-        </Button>
+          <Button size="sm" classname="hidden md:block">
+            Resume
+          </Button>
         </a>
         {/*Mobile menu button*/}
-        <button className="md:hidden p-2 text-foreground"
-        onClick={()=>{
-          setIsMobileMenuOpen((prev) => !prev);
-        }}  
+        <button
+          className="md:hidden p-2 text-foreground"
+          onClick={() => {
+            setIsMobileMenuOpen((prev) => !prev);
+          }}
         >
-          <i>
-            {isMobileMenuOpen ? <X/> : <Menu />}
-          </i>
+          <i>{isMobileMenuOpen ? <X /> : <Menu />}</i>
         </button>
       </nav>
       {/*Mobile menu */}
-      {isMobileMenuOpen && (<div className="md:hidden glass-strong animate-fade-in">
-        <div className="container mx-auto px-6 py-6 flex flex-col gap-4 ">
-          {navLinks.map((link, index) => (
-            <a onClick={()=>setIsMobileMenuOpen(false)}
-              key={index}
-              href={link.href}
-              className="text-lg text-muted-foreground hover:text-foreground py-2"
-            >
-              {link.Label}
+      {isMobileMenuOpen && (
+        <div className="md:hidden glass-strong animate-fade-in">
+          <div className="container mx-auto px-6 py-6 flex flex-col gap-4 ">
+            {navLinks.map((link, index) => (
+              <a
+                onClick={() => setIsMobileMenuOpen(false)}
+                key={index}
+                href={link.href}
+                className="text-lg text-muted-foreground hover:text-foreground py-2"
+              >
+                {link.Label}
+              </a>
+            ))}
+            <a href="/fzCv.pdf" download="CV-Abdessettar-Fatima-Ezzahra">
+              <Button size="default" classname="w-full">
+                Resume{" "}
+              </Button>
             </a>
-          ))}
-          <a href="/fzCv.pdf" download="CV-Abdessettar-Fatima-Ezzahra">
-          <Button size="default" classname="w-full">Resume </Button>
-          </a>
+          </div>
         </div>
-      </div>)}
+      )}
     </header>
   );
 };

@@ -139,13 +139,14 @@ function Hero() {
                   key={index}
                   href={social.href}
                   className="p-2 rounded-full glass hover:bg-primary/20 hover:text-primary transition-all duration-100"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {<social.icon className="w-5 h-5" />}
                 </a>
               ))}
             </div>
           </div>
-          {/*right col -profile picture*/}
           {/* right col - profile picture */}
           <div className="relative animate-fade-in animation-delay-300">
             <div className="relative max-w-md mx-auto">
@@ -155,7 +156,7 @@ function Hero() {
               {/* Image container (NOT blurred) */}
               <div className="relative glass rounded-4xl p-2 glow-border z-10">
                 <img
-                  src="/portfolio3.png"
+                  src="/linkedin.png"
                   alt="Abdessettar Fatima-Ezzahra"
                   className="w-full aspect-4/5 object-cover rounded-3xl"
                 />
@@ -170,7 +171,9 @@ function Hero() {
                 </div>
                 {/*stats badge*/}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-xl font-bold text-primary">Full stack & AI </div>
+                  <div className="text-xl font-bold text-primary">
+                    Full stack & AI{" "}
+                  </div>
                   <div className="text-md text-muted-foreground">
                     learning and building everyday
                   </div>
@@ -195,7 +198,9 @@ function Hero() {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center mb-10 sm:mb-5 md:mb-0 animate-fade-in animation-delay-600">
-        <span className="text-xl text-muted-foreground animate-pulse ">SCROLL</span>
+        <span className="text-xl text-muted-foreground animate-pulse ">
+          SCROLL
+        </span>
         <a href="#about">
           <ChevronDown className="animate-pulse h-10 w-10 text-muted-foreground" />
         </a>

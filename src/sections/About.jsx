@@ -32,7 +32,7 @@ function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden md:py-20 lg:py-30 py-5"
+      className="relative overflow-hidden md:py-20 lg:py-30 py-5 "
     >
       {/*this will seperate our section into two*/}
       <div className="container mx-auto px-6 pb-20 relative z-10 flex flex-col xl:flex-row xl:gap-10">
