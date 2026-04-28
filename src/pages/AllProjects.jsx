@@ -1,6 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, GitBranch, Globe, Code2, BrainCircuit, LayoutGrid } from "lucide-react";
+import {
+  ArrowUpRight,
+  GitBranch,
+  Globe,
+  Code2,
+  BrainCircuit,
+  LayoutGrid,
+} from "lucide-react";
 import { projects } from "@/data/projects";
 
 const filters = [
@@ -11,6 +18,11 @@ const filters = [
 
 function AllProjects() {
   const [activeFilter, setActiveFilter] = useState("all");
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const filteredProjects =
     activeFilter === "all"
@@ -26,9 +38,6 @@ function AllProjects() {
       <div className="container mx-auto px-6 relative z-10 flex flex-col items-center gap-10">
         {/* Section Header */}
         <div className="flex flex-col items-center justify-center gap-6 text-center">
-          <div className="text-primary text-lg">
-            <span>PORTFOLIO</span>
-          </div>
           <h2 className="text-primary text-5xl font-medium">
             All my{" "}
             <span className="font-serif font-normal italic text-white">
@@ -36,8 +45,8 @@ function AllProjects() {
             </span>
           </h2>
           <p className="text-muted-foreground text-sm max-w-2xl">
-            A complete collection of my work across full-stack development and data science,
-            showcasing real-world systems and AI-driven solutions.
+            A complete collection of my work across full-stack development and
+            data science, showcasing real-world systems and AI-driven solutions.
           </p>
         </div>
 
@@ -121,7 +130,6 @@ function AllProjects() {
             ))}
           </div>
 
-          {/* Empty state */}
           {filteredProjects.length === 0 && (
             <div className="text-center py-20 text-muted-foreground">
               No projects found in this category.

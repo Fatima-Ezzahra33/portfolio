@@ -2,7 +2,7 @@ export const projects = [
   // ─── FULL STACK ───
   {
     id: "applyAI",
-    title: "JobTrackr – AI-Powered Job Application Tracker",
+    title: "applyAI – AI-Powered Job Application Tracker",
     description:
       "Architected a distributed microservices system with Eureka service discovery, API Gateway, rate limiting, and Redis caching. Secured the platform using Keycloak (OAuth2/OIDC) and built an async AI service consuming RabbitMQ events to return CV recommendations, missing keywords, and rewritten bullet points. Developed a React/TypeScript frontend with Redux & React Router; containerized all services with Docker.",
     image: "/applyAI.png",
