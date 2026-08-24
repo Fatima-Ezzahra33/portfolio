@@ -5,7 +5,7 @@ export const projects = [
     title: "applyAI – AI-Powered Job Application Tracker",
     description:
       "Architected a distributed microservices system with Eureka service discovery, API Gateway, rate limiting, and Redis caching. Secured the platform using Keycloak (OAuth2/OIDC) and built an async AI service consuming RabbitMQ events to return CV recommendations, missing keywords, and rewritten bullet points. Developed a React/TypeScript frontend with Redux & React Router; containerized all services with Docker.",
-    image: "/applyAI.png",
+    image: `${import.meta.env.BASE_URL}applyAI.png`,
     github: "https://github.com/Fatima-Ezzahra33/apply-ai",
     status: "Finished",
     category: "fullstack",
@@ -30,7 +30,7 @@ export const projects = [
     title: "BiblioTech – Online Library Platform",
     description:
       "Full-stack library management platform with strict role-based access control. Readers can browse, search, and filter books by category, manage favorites and a personal reading library, and read books directly online. Authors can publish books and create custom categories. Both roles benefit from full profile management and secure authentication with encrypted passwords.",
-    image: "/biblio.png",
+    image: `${import.meta.env.BASE_URL}biblio.png`,
     github: "",
     status: "Finished",
     category: "fullstack",
@@ -41,7 +41,7 @@ export const projects = [
     title: "PetMatch – Intelligent Pet Adoption Platform",
     description:
       "Led a 5-member development team using Agile Scrum methodology. Architected core features including user authentication, pet profiles, and adoption workflows. Integrated AI-powered recommendation engine via Grok AI API for personalized pet matching. Established automated testing with PHPUnit, Vitest and Cypress, achieving 85% code coverage.",
-    image: "/petmatch.png",
+    image: `${import.meta.env.BASE_URL}petmatch.png`,
     github: "https://github.com/Fatima-Ezzahra33/petMatch",
     status: "Finished",
     category: "fullstack",
@@ -61,7 +61,7 @@ export const projects = [
     title: "GOMAT – Internal Management System",
     description:
       "Contributed to the design and development of a full-stack internal management web application for enterprise operations during internship at GOMAT, Casablanca. Implemented complete CI/CD pipeline with multi-stage Docker containerization, automated testing, and continuous deployment across staging and production environments.",
-    image: "/GOMAT.jpg",
+    image: `${import.meta.env.BASE_URL}GOMAT.jpg`,
     github: "",
     status: "Finished",
     category: "fullstack",
@@ -80,7 +80,7 @@ export const projects = [
     title: "YomogoMed – Digital Clinical Management Platform",
     description:
       "Designed a digital clinical management platform using microservices architecture (6 independent services) with asynchronous communication via RabbitMQ, with multi-tenant preparation (Row-Level Security PostgreSQL, MongoDB partitioning). Developed a local RAG chatbot (FastAPI, LangChain, Ollama, pgvector) for patient orientation and conversational appointment booking, guaranteeing zero data exfiltration. Implemented a dual-level medical record (detailed per service vs global summary) with immutable access traceability, compliant with Moroccan Law 09-08; secured via Keycloak (SSO, JWT, MFA) and Ocelot API Gateway (rate limiting, JWT validation).",
-    image: "/yomogomed.png",
+    image: `${import.meta.env.BASE_URL}yomogomed.png`,
     github: "",
     status: "In Progress",
     category: "fullstack",
@@ -112,7 +112,7 @@ export const projects = [
       "Tumor Segmentation – Brain Tumor Classification via Deep Learning on MRI",
     description:
       "Designed and trained a CNN in PyTorch to classify brain MRIs into 4 categories (glioma, meningioma, pituitary, no_tumor), with data augmentation and Dropout regularization to optimize generalization. Built a complete ML pipeline, with evaluation on independent test set (confusion matrix, F1-score). Developed an assisted diagnosis web application with Streamlit (image upload, real-time prediction, probability visualization) and Docker containerization for portable deployment.",
-    image: "/tumor.png",
+    image: `${import.meta.env.BASE_URL}tumor.png`,
     github: "",
     status: "Finished",
     category: "datascience",
@@ -132,7 +132,7 @@ export const projects = [
       "Autoimmune Disease Classification – Predictive Analysis on Clinical Data",
     description:
       "ML pipeline on clinical data with preprocessing and feature engineering. Trained and compared models (Logistic Regression, Random Forest, XGBoost), achieving an F1-score of 0.995 and AUC of 0.995 on test data. Analyzed prediction interpretability via SHAP to identify the most discriminating biomarkers, facilitating clinical understanding of results.",
-    image: "/autoimmune.png",
+    image: `${import.meta.env.BASE_URL}autoimmune.png`,
     github: "",
     status: "Finished",
     category: "datascience",

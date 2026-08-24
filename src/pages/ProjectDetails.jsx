@@ -61,7 +61,7 @@ function ProjectDetails() {
   const catConfig =
     categoryConfig[project.category] || categoryConfig.fullstack;
   const CategoryIcon = catConfig.icon;
-  const videoPath = `/videos/${project.id}.mp4`;
+  const videoPath = `${import.meta.env.BASE_URL}videos/${project.id}.mp4`;
 
   const handleVideoClick = () => {
     const video = document.getElementById("demo-video");

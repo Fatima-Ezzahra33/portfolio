@@ -43,7 +43,10 @@ const NavBar = () => {
             ))}
           </div>
         </div>
-        <a href="/fzCv.pdf" download="CV-Abdessettar-Fatima-Ezzahra">
+        <a
+          href={`${import.meta.env.BASE_URL}fzCv.pdf`}
+          download="CV-Abdessettar-Fatima-Ezzahra"
+        >
           <Button size="sm" classname="hidden md:block">
             Resume
           </Button>
@@ -72,7 +75,10 @@ const NavBar = () => {
                 {link.Label}
               </a>
             ))}
-            <a href="/fzCv.pdf" download="CV-Abdessettar-Fatima-Ezzahra">
+            <a
+              href={`${import.meta.env.BASE_URL}fzCv.pdf`}
+              download="CV-Abdessettar-Fatima-Ezzahra"
+            >
               <Button size="default" classname="w-full">
                 Resume{" "}
               </Button>

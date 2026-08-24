@@ -60,7 +60,7 @@ function Hero() {
       {/*Bg*/}
       <div className="absolute inset-0">
         <img
-          src="/hero-bg.jpg"
+          src={`${import.meta.env.BASE_URL}hero-bg.jpg`}
           alt="Hero image"
           className="w-full h-full object-cover opacity-40 "
         />
@@ -118,7 +118,10 @@ function Hero() {
               <Button size="lg">
                 Contact me <ArrowRight className="w-5 h-5" />
               </Button>
-              <a href="/fzCv.pdf" download="CV-Abdessettar-Fatima-Ezzahra">
+              <a
+                href={`${import.meta.env.BASE_URL}fzCv.pdf`}
+                download="CV-Abdessettar-Fatima-Ezzahra"
+              >
                 <AnimatedBorderButton>
                   <Download className="w-5 h-5" />
                   Download CV
@@ -156,7 +159,7 @@ function Hero() {
               {/* Image container (NOT blurred) */}
               <div className="relative glass rounded-4xl p-2 glow-border z-10">
                 <img
-                  src="/linkedin.png"
+                  src={`${import.meta.env.BASE_URL}linkedin.png`}
                   alt="Abdessettar Fatima-Ezzahra"
                   className="w-full aspect-4/5 object-cover rounded-3xl"
                 />
