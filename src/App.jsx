@@ -8,7 +8,8 @@ import Skills from "@/sections/Skills.jsx";
 import Projects from "@/sections/Projects.jsx";
 import Contact from "@/sections/Contact.jsx";
 import Studies from "@/sections/Studies.jsx";
-import AllProjects from "@/pages/AllProjects.jsx"; 
+import AllProjects from "@/pages/AllProjects.jsx";
+import ProjectDetails from "@/pages/ProjectDetails.jsx";
 
 const Home = () => (
   <>
@@ -26,10 +27,11 @@ function App() {
     <div className="min-h-screen overflow-x-hidden">
       <NavBar />
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<AllProjects />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<AllProjects />} />
+            <Route path="/projects/:id" element={<ProjectDetails />} />
+          </Routes>
       </main>
       <Footer />
     </div>
